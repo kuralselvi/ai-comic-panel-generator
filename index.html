@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><title>ComicCraft - AI Comic Creator</title>
+<style>
+body{margin:0; font-family:Arial; background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9') center/cover fixed; min-height:100vh; display:flex; align-items:center; justify-content:center;}
+.card{background:white; padding:25px; border-radius:12px; width:360px; box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+.card h2{text-align:center; margin:0 0 15px 0;}
+input,select,textarea{width:100%; padding:10px; margin:6px 0 12px 0; border:1px solid #ccc; border-radius:6px; box-sizing:border-box;}
+button{width:100%; padding:12px; background:#0d6efd; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; font-size:16px;}
+button:hover{background:#0b5ed7;}
+label{font-size:13px; font-weight:bold; color:#333;}
+</style></head>
+<body>
+<div class="card">
+<h2>✨ Create Your Comic</h2>
+<form action="/generate" method="post">
+<label>Story Prompt</label>
+<textarea name="prompt" rows="3" placeholder="A brave hero saves the city from...">A brave hero saves the city</textarea>
+<label>Main Character Name</label>
+<input name="character" placeholder="Finn" value="Finn"/>
+<label>Setting</label>
+<select name="setting"><option>school</option><option selected>forest</option><option>space</option><option>city</option></select>
+<label>Story Tone</label>
+<select name="tone"><option>light-hearted</option><option>dramatic</option><option>poetic</option><option selected>funny</option></select>
+<label>Art Style</label>
+<select name="art_style"><option selected>anime</option><option>pixel art</option><option>comic book</option><option>realistic</option></select>
+<button type="submit">Generate Comic</button>
+</form>
+</div>
+</body></html>
